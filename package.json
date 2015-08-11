@@ -1,16 +1,13 @@
 {
-  "name": "DB Migrator",
+  "name": "db-migrator",
   "version": "0.0.1",
   "description": "A tool that helps manage database tables with versions ",
   "main": "src/migrator.js",
   "dependencies": {},
   "devDependencies": {
     "chai": "^2.0.0",
-    "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-mocha": "^2.0.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-webpack": "^1.2.0",
     "mocha": "^2.1.0"
   },
   "scripts": {
