@@ -2,8 +2,12 @@
   "name": "db-migrator",
   "version": "0.0.1",
   "description": "A tool that helps manage database tables with versions ",
-  "main": "src/migrator.js",
-  "dependencies": {},
+  "main": "src/migrator",
+  "dependencies": {
+    "backbone-helpers": "^1.0.6",
+    "underscore": "^1.8.3",
+    "yargs": "^3.18.0"
+  },
   "devDependencies": {
     "chai": "^2.0.0",
     "gulp": "^3.8.11",
@@ -11,7 +15,11 @@
     "mocha": "^2.1.0"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "src/migrator.js"
+  },
+  "bin": {
+    "migrator": "src/migrator.js"
   },
   "repository": {
     "type": "git",
