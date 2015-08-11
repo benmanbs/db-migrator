@@ -1,8 +1,8 @@
 {
-  "name": "[NAME]",
+  "name": "DB Migrator",
   "version": "0.0.1",
-  "description": "[DESCRIPTION]",
-  "main": "backbone.freeze.js",
+  "description": "A tool that helps manage database tables with versions ",
+  "main": "src/migrator.js",
   "dependencies": {},
   "devDependencies": {
     "chai": "^2.0.0",
@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "[GIT REPO]"
+    "url": "https://github.com/benmanbs/db-migrator.git"
   },
   "keywords": [],
   "author": "Benjamin Shai <benmanbs@gmail.com> (http://github.com/benmanbs)",
   "license": "MIT",
   "bugs": {
-    "url": "[BUGS URL]"
+    "url": "https://github.com/benmanbs/db-migrator/issues"
   },
-  "homepage": "[HOME]"
+  "homepage": "https://github.com/benmanbs/db-migrator"
 }
