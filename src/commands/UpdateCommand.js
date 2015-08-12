@@ -5,3 +5,11 @@
 'use strict';
 
 // TODO flesh this out
+
+var Command = require('./Command');
+
+var UpdateCommand = Command.extend({
+    run: function() {}
+});
+
+module.exports = UpdateCommand;
