@@ -12,10 +12,6 @@
 var Extend = require('backbone-helpers').extend;
 
 var Command = function() {
-    // If there are no args, or no database, or help was explicitly called
-    if (!arguments.length || arguments.help || !arguments.d) {
-        this.showHelp = true;
-    }
     this.initialize.apply(this, arguments);
 };
 

@@ -23,37 +23,37 @@ var argv = yargs
     .command('setup', 'Set up a migrator for an existing database')
     .command('update', 'Bring a database up to date')
     .command('integration', 'Bring integration test databases up to date')
-    .option('h', {
-        alias: 'host',
+    .option('host', {
+        alias: 'h',
         demand: false,
         describe: 'The host to migrate to',
         default: 'localhost'
     })
-    .option('d', {
-        alias: 'database',
+    .option('database', {
+        alias: 'd',
         demand: false,
         describe: 'The database to migrate'
     })
-    .option('u', {
-        alias: 'user',
+    .option('user', {
+        alias: 'u',
         demand: false,
         describe: 'The user to log in to the database with',
         default: 'root'
     })
-    .option('w', {
-        alias: 'password',
+    .option('password', {
+        alias: 'w',
         demand: false,
         describe: 'The password to log in to the database with',
         default: ''
     })
-    .option('p', {
-        alias: 'port',
+    .option('port', {
+        alias: 'p',
         demand: false,
         describe: 'The port to use',
         default: 3306
     })
-    .option('r', {
-        alias: 'root',
+    .option('root', {
+        alias: 'r',
         demand: false,
         describe: 'The root directory the migrations live in',
         default: process.cwd()
