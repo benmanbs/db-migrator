@@ -5,7 +5,10 @@
   "main": "src/migrator",
   "dependencies": {
     "backbone-helpers": "^1.0.6",
+    "mkdirp": "^0.5.1",
+    "mysql": "^2.8.0",
     "underscore": "^1.8.3",
+    "when": "^3.7.3",
     "yargs": "^3.18.0"
   },
   "devDependencies": {

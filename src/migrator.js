@@ -70,12 +70,11 @@ if (!argv.d) {
     process.exit(1);
 }
 
-try {
-    var Command = commander.getCommand(argv._[0]);
-    new Command(_.omit(argv, '_', '$0')).run();
+var Command = commander.getCommand(argv._[0]);
+new Command(_.omit(argv, '_', '$0')).run().then(function() {
     process.exit(0);
-} catch (err) {
+}, function(err) {
     console.log('Sorry -- an error occurred');
     console.log(err.toString());
     process.exit(1);
-}
+});

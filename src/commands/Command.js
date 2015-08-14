@@ -10,19 +10,34 @@
 'use strict';
 
 var Extend = require('backbone-helpers').extend;
+var mysql = require('mysql');
 
 var Command = function() {
     this.initialize.apply(this, arguments);
 };
 
 /**
- * No default initialize implementation, but allow the option for
- * implementations to have their own init calls.
+ * Default implementation starts up a mysql connection.
  */
-Command.prototype.initialize = function() {};
+Command.prototype.initialize = function(options) {
+    options = options || {};
+
+    // Create the mysql connection if it's not passed in
+    this.connection = options.connection || mysql.createConnection({
+        host     : options.host,
+        user     : options.user,
+        password : options.password,
+        database : options.database
+    });
+
+    this.root = options.root;
+    this.database = options.database;
+};
 
 /**
  * This must be overridden by the implementor.
+ *
+ * As an aside, the implementation must return a promise.
  */
 Command.prototype.run = function() {
     throw new Error("Class extending Command must override the run method.");
